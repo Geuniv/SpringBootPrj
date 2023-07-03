@@ -48,6 +48,19 @@
             <version>2.3.1</version>
             <scope>test</scope>
         </dependency>
+
+    <dependency>
+        <groupId>org.mariadb.jdbc</groupId>
+        <artifactId>mariadb-java-client</artifactId>
+        <scope>runtime</scope>
+    </dependency>
+
+        <!-- Thymleaf 라이브러리 사용을 위한 디펜던시 추가 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

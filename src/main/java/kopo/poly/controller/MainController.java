@@ -13,4 +13,10 @@ public class MainController {
         log.info(this.getClass().getName() + ".main 페이지 보여주는 함수 실행");
         return "/main";
     }
+
+    @GetMapping("/test")
+    public String test() throws Exception {
+        log.info(this.getClass().getName() + ".test 페이지 보여주는 함수 실행");
+        return "/test";
+    }
 }

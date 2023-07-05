@@ -185,13 +185,13 @@ public class UserInfoController {
                 * 일반적으로 세션에 저장되는 키는 대문자로 입력하며, 앞에 SS를 붙인다.
                 *
                 * Session 단어에서 SS를 가져온 것이다.*/
-                session.setAttribute("SS_USER_ID", user_id);
+                session.setAttribute("ss_user_id", user_id);
                 session.setAttribute("SS_USER_NAME", CmmUtil.nvl(rDTO.getUser_name()));
 
                 // 로그인 성공 메세지와 이동할 경로의 url
                 msg = "로그인이 성공했습니다. \n" + rDTO.getUser_name() + "님 환영합니다.";
 //                url = "/main";
-                url="/user/login";
+                url="/notice/noticeList";
             }
         } catch (Exception e) {
             //저장이 실패되면 사용자에게 보여줄 메시지

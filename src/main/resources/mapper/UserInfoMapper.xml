@@ -27,4 +27,12 @@
                         #{user_id},
                         SYSDATE())
     </insert>
+
+    <!-- 로그인을 위해 아이디와 비밀번호가 일치하는지 확인하기 -->
+    <select id="getLogin" parameterType="UserInfoDTO" resultType="UserInfoDTO">
+        SELECT USER_ID, USER_NAME, EMAIL
+        FROM USER_INFO
+        WHERE USER_ID = #{user_id}
+            AND PASSWORD = #{password}
+    </select>
 </mapper>

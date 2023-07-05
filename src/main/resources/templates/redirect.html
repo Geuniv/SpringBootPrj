@@ -5,11 +5,15 @@
   <title>redirect</title>
 </head>
 <body>
-<script type="text/javascript">
-  let msg = /*[[${msg}]]*/ '';
-  let url = /*[[${url}]]*/ '/main';
-  alert(msg);
-  location.href=url;
+<!-- Javascript 내부에서 Thymeleaf 문법을 인식할 수 있도록 함 -->
+<script th:inline="javascript">
+  window.onload = function () {
+    /* 자바로부터 넘어온 값을 Thymeleaf 문법으로 꺼내어 자바스크립트 변수에 할당함 */
+    let msg = [[${msg}]];
+    let url = [[${url}]];
+    alert(msg);
+    location.href = url;
+  }
 </script>
 <meta charset="UTF-8">
 </body>
